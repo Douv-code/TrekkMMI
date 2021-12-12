@@ -1,0 +1,237 @@
+@font-face{
+    font-family: 'Urbanist';
+    src: url(../Police/Oswald-Regular_titre.ttf) format(truetype);
+}
+
+body{
+    background-color:#DDDDDD;
+    font-family: "Urbanist";
+}
+/* (A) NAVIGATION BAR */
+.ddmenu { display: flex; }
+ 
+/* (B) FIRST LEVEL ITEMS */
+.ddmenu a, .ddmenu .ddgroup {
+  width: 100%;
+  padding: 20px;
+  color: #fff;
+  text-decoration: none;
+  background: #4E996D;
+}
+.ddmenu a:hover, .ddmenu .ddgroup:hover {
+  color: #DDDDDD;
+  background: #2D714A;
+  cursor: pointer;
+}
+
+.ddmenu .ddgroup { position: relative; }
+.ddsub {
+  width: 100%;
+  position: absolute;
+  top: 100%; left: 0;
+  display: none;
+}
+.ddsub a { 
+  display: block; 
+  box-sizing: border-box;
+}
+.ddgroup:hover .ddsub { display: block; }
+
+/* (D) DROPDOWN ARROW */
+.ddgroup::after {
+    content: "\27A4";
+    position: absolute;
+    top: 18px; right: 20px;
+    transition: transform 0.2s;
+  }
+  .ddgroup:hover::after {
+    transform: rotate(90deg);
+  }
+
+  /* (E) ON SMALL SCREENS */
+@media screen and (max-width: 640px) {
+    .ddmenu { flex-wrap: wrap; }
+    .ddsub {
+      position: static;
+      margin-top: 10px;
+    }
+  }
+
+  #article1{
+    font-size: 23px;
+    background-color: #1A1A1A;
+    color: #fff;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  #page2article1{
+    font-size: 23px;
+    background-color: #2D714A;
+    color: #fff;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 500px;
+  }
+
+  #page2article2{
+    font-size: 23px;
+    background-color: #4E996D;
+    color: #fff;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 400px;
+  }
+
+  #page2article3{
+    font-size: 23px;
+    background-color: #1A1A1A;
+    color: #fff;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 500px;
+  }
+
+
+
+  #imgreseau{
+float: right;
+padding-left: 5px;
+
+  }
+
+  #p1{
+    width: 100%;
+    padding: 35px;
+  }
+
+  #pagep1{
+    width: 60%;
+    padding: 35px;
+    text-align: left;
+  }
+
+  #p2{
+    font-size: 23px;
+    background-color: #1A1A1A;
+    color: #fff;
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 5px;
+    height: 115px;
+  }
+  #p3{
+    font-size: 23px;
+    background-color: #4E996D;
+    color: #1A1A1A;
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 5px;
+    padding:15px ;
+  }
+
+  #carrep1{
+    float: right;
+  }
+  #carrep2{
+    float: left;
+    margin-left: 5px;
+  }
+  #carrep3{
+    float: right;
+    margin-right: 5px;
+  }
+
+  #rectangle:not(h1){
+    float:center;
+    width:20%;
+    height:60px;
+    background:#fff;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+#rectangle:not(div){
+  text-align: center;
+  color:#1A1A1A;
+}
+
+#rectanglep2:not(h1){
+  float:center;
+  width:20%;
+  height:60px;
+  background:#DDDDDD;
+  margin-left: 40%;
+  margin-right: 40%;
+}
+#rectanglep2:not(div){
+text-align: center;
+color:#1A1A1A;
+}
+
+#article2{
+  background-color: #fff;
+  margin-top: -30px;
+
+}
+#equipe{
+  margin-left: 15%;
+  font-size: 35px;
+}
+#presentation1, #presentation2{
+  border-radius: 9999px;
+  margin-left: 30%;
+  
+}
+
+#souspresentation{
+text-align: center;
+font-size: 25px;
+}
+
+#rectangle2:not(h1){
+  float:center;
+  width:20%;
+  height:40px;
+  background:#1A1A1A;
+  margin-left: 40%;
+  margin-right: 40%;
+}
+#rectangle2:not(div){
+text-align: center;
+color:#fff;
+}
+
+#rectangle3:not(h1){
+  float:center;
+  width:10%;
+  height:42px;
+  background:#2D714A;
+  margin-left: 45%;
+  margin-right: 40%;
+}
+#rectangle3:not(div){
+text-align: center;
+color:#1A1A1A;
+font-size: 25px;
+}
+#outil{
+  width:100%;
+  height:42px;
+  background:#2D714A;
+}
+
+#basdepage{
+  font-size: 23px;
+    background-color: #DDDDDD;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+#logobas{
+    margin-left: 32%;
+    margin-right: 32%;
+}
