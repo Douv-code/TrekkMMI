@@ -1,86 +1,88 @@
-@font-face{
-    font-family: 'Urbanist';
-    src: url(../Police/Oswald-Regular_titre.ttf) format(truetype);
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@600&display=swap');
+
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
 }
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
 
 body{
-    background-color:#DDDDDD;
+    background-color:#1A1A1A;
     font-family: "Urbanist";
 }
-/* (A) NAVIGATION BAR */
-.ddmenu { display: flex; }
- 
-/* (B) FIRST LEVEL ITEMS */
-.ddmenu a, .ddmenu .ddgroup {
-  width: 100%;
-  padding: 20px;
-  color: #fff;
+header{
+  display: flex;
+}
+.toplink{
+  flex: 2 10 auto;
+
+}
+.toplink1{
   text-decoration: none;
-  background: #4E996D;
+  color: #2D714A;
+  flex: 1 10 auto;
+  text-align: center;
+  text-transform: uppercase;
+  /*margin:  auto 0 auto 0;*/
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  position: relative;
+  background: linear-gradient(to bottom, transparent 65%, #4E996D 10%) no-repeat center left/0 100%;
+  transition: background-size 0.2s ease;
 }
-.ddmenu a:hover, .ddmenu .ddgroup:hover {
+
+.toplink1:hover {
   color: #DDDDDD;
-  background: #2D714A;
-  cursor: pointer;
+  background-size: 100% 100%;
 }
-
-.ddmenu .ddgroup { position: relative; }
-.ddsub {
-  width: 100%;
-  position: absolute;
-  top: 100%; left: 0;
-  display: none;
-}
-.ddsub a { 
-  display: block; 
-  box-sizing: border-box;
-}
-.ddgroup:hover .ddsub { display: block; }
-
-/* (D) DROPDOWN ARROW */
-.ddgroup::after {
-    content: "\27A4";
-    position: absolute;
-    top: 18px; right: 20px;
-    transition: transform 0.2s;
-  }
-  .ddgroup:hover::after {
-    transform: rotate(90deg);
-  }
-
-  /* (E) ON SMALL SCREENS */
-@media screen and (max-width: 640px) {
-    .ddmenu { flex-wrap: wrap; }
-    .ddsub {
-      position: static;
-      margin-top: 10px;
-    }
-  }
 
   #article1{
     font-size: 23px;
     background-color: #1A1A1A;
-    color: #fff;
-    padding-top: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
+    color: #DDDDDD;
+    padding-top: 75px;
+    padding-left: 75px;
+    padding-right: 75px;
+    -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   }
 
   #article2{
-    background-color: #fff;
+    background-color: #DDDDDD;
   
   }
 
 
 
   #imgreseau{
-float: right;
 padding-left: 5px;
-
   }
 
   #p1{
-    padding: 35px;
+   /*padding: 35px;*/padding-bottom: 15px;
+   text-align: justify;
   }
 
   #p2{
@@ -104,7 +106,8 @@ padding-left: 5px;
   }
 
   #carrep1{
-    float: right;
+    float: left;
+    padding-right: 50px;
   }
 
   .box {
@@ -122,7 +125,7 @@ padding-left: 5px;
 
   .two {
     flex: 0.5 1 auto;
-    background-color: #fff;
+    background-color: #DDDDDD;
     text-align: center;
     color: black ;
     font-weight:bolder;
@@ -132,7 +135,7 @@ padding-left: 5px;
 
   .one1 {
     flex: 1 1 auto;
-    background-color: #fff;
+    background-color: #DDDDDD;
   }
 
   .two1 {
@@ -150,7 +153,13 @@ padding-left: 5px;
     background-color: #2D714A;
   }
 
+.twop2>iframe{
+    width: 80%;
+    height: 800px;
+}
+
   .two2 {
+    width: auto;
     flex: 0.5 1 auto;
     background-color: #2D714A;
     text-align: center;
@@ -219,77 +228,106 @@ width: 80%;
 
     /*page 2*/
 
-    .boxp2 {
-      display: flex;
-      flex-wrap: wrap;
-        font-size: 23px;
-        background-color: #2D714A;
-        color: #fff;
-        padding: 50px 75px 10px;
-    }
-  
-    .onep2 {
-      flex: 1 1 auto;
-    }
-  
+
     .twop2 {
       flex: 4 1 auto;
       text-align: center;
-      
-      
       font-size: 30px;
     }
 
-    #rectanglep2{
-      background:#DDDDDD;
-      width: max-content;
-      padding: 10px;
-      font-size: 30px;
-      margin-top: 200px;
-      margin-left: 85px;
-      font-weight:bolder;
-    }
-
-    .boxp3 {
-      display: flex;
-      flex-wrap: wrap;
-        font-size: 23px;
-        background-color: #4E996D;
-        color: #fff;
-        padding: 50px 75px 10px;
-    }
-
-    .boxp4 {
-      display: flex;
-      flex-wrap: wrap;
-        font-size: 23px;
-        background-color: #1A1A1A;
-        color: #fff;
-        padding: 50px 75px 10px;
-    }
-    .boxp5 {
-      display: flex;
-      flex-wrap: wrap;
-        font-size: 23px;
-        background-color: #2D714A;
-        color: #fff;
-        padding: 50px 75px 10px;
-    }
 
     #calendar{
-      margin: 50px 10px;
+      margin: 50px;
       display: flex;
-      flex-wrap: wrap;
+      background-image: url(../img/bckgrd/feuillescolorehaut.png) ;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-color: #fff;
+      font-weight: 600;
     }
 
+
+
+    .wrapper {
+      display: grid;
+      grid-gap: 0px;
+      grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+    
+    }
+
+    #sidenav-container {
+     width: 0px;
+    }
+
+    .three {
+      grid-column: 1;
+      grid-row: 1/2;
+      font-size: 23px;
+      background-color: #4E996D;
+      color: #fff;
+      padding: 50px 75px 10px;
+      border-radius: 25px 0 0 0;
+    }
+
+
+    .four {
+      grid-column: 2;
+      grid-row: 1/2;
+      font-size: 23px;
+      background-color: #2D714A;
+      color: #fff;
+      padding: 50px 75px 10px;
+      border-radius: 0 25px 0 0;
+    }
+    .five {
+      grid-column: 1;
+      grid-row: 4;
+      font-size: 23px;
+      background-color: #2D714A;
+      color: #fff;
+      padding: 50px 75px 10px;
+      border-radius: 0 0 0 25px;
+    }
+    .six {
+      grid-column: 2;
+      grid-row: 4;
+      font-size: 23px;
+      background-color: #4E996D;
+      color: #fff;
+      padding: 50px 75px 10px;
+      border-radius:0 0 25px 0;
+    }
+
+
+
+    .onep3>iframe {
+      width: 100%;
+    }
+
+
     .onep3 {
-      flex: 0.5 1 auto;
+      flex: 4 4 auto;
+      top: 10%;
+      margin-top: 10%;
+      padding-left: 5%;
+      width: 100%;
     }
   
     .twop3 {
-      flex: 1 1 auto;
+      flex: 1 4 auto;
       background-color: #4E996D;
       color: black ;
       font-size: 15px;
-      padding: 5px 5px 0px;
+      margin: 50px;
+      margin-top: 10%;
+      padding-bottom: 5%;
+    }
+
+    .gris{
+      background-color: #DDDDDD;
+      width: 90%;
+      height: 15%;
+      padding: 5%;
+      font-size: 2em;
+      text-transform: uppercase;
     }
